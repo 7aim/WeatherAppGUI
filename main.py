@@ -18,15 +18,20 @@ title.place(x=60,y=50)
 city_entry = tk.Entry(root, font=("Arial", 18),bg=MAIN_COLOR,fg="White")
 city_entry.place(x=18,y=110)
 
+result_label = tk.Label(root, text="", font=("Arial", 12, "bold"), bg=BG_MAIN, fg="White", justify="center", wraplength=260)
+
 def prt():
     city = city_entry.get()
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
-    if re.get(url).status_code == 200:
-        response = re.get(url)
+    response = re.get(url)
+    if response.status_code == 200:
         data = response.json()
-        messagebox.showinfo(f"Weather",f"Country : {data["sys"]["country"]}, Weather : {data["weather"][0]["main"]}, Temp : {int(data["main"]["temp"])}")
+        result_label.place(x=32, y=240)
+        result_label.config(text=f"Country : {data["sys"]["country"]}, Weather : {data["weather"][0]["main"]}, Temp : {int(data["main"]["temp"])} °C")
     else:
-         messagebox.showinfo("Invalid entry","Invalid entry")
+        result_label.place(x=55, y=240)
+        result_label.config(text="City not found.\nPlease enter a valid city.",)
+
 enter_button = tk.Button(root,text="Enter",font=("Arial", 15, "bold"),bg=MAIN_COLOR,fg="White",command=prt)
 enter_button.place(x=120,y=170)
 
