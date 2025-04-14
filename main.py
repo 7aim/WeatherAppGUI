@@ -21,10 +21,12 @@ city_entry.place(x=18,y=110)
 def prt():
     city = city_entry.get()
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
-    response = re.get(url)
-    data = response.json()
-    messagebox.showinfo(f"Weather",f"Country : {data["sys"]["country"]}, Weather : {data["weather"][0]["main"]}, Temp : {int(data["main"]["temp"])}")
-
+    if re.get(url).status_code == 200:
+        response = re.get(url)
+        data = response.json()
+        messagebox.showinfo(f"Weather",f"Country : {data["sys"]["country"]}, Weather : {data["weather"][0]["main"]}, Temp : {int(data["main"]["temp"])}")
+    else:
+         messagebox.showinfo("Invalid entry","Invalid entry")
 enter_button = tk.Button(root,text="Enter",font=("Arial", 15, "bold"),bg=MAIN_COLOR,fg="White",command=prt)
 enter_button.place(x=120,y=170)
 
