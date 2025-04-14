@@ -4,8 +4,6 @@ from tkinter import messagebox
 
 API_KEY = "9acd0597ae349fa651ff17893ec5b7e2"
 
-
-
 root = tk.Tk()
 root.title('Weather App')
 root.geometry("300x300")
