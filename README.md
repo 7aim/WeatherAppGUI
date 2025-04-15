@@ -18,10 +18,6 @@ It serves as a beginner-friendly project showcasing how to interact with APIs an
 - **Error Handling:** If the city is not found, the application informs the user to enter a valid city.
 - **Easy Customization:** Modify the colors, API key, or other UI components as needed.
 
-## Screenshots
-
-![image](https://github.com/user-attachments/assets/71bd45b8-8fff-445b-9058-603548b8ffb8)
-
 ## Prerequisites
 
 Before running the Weather App, ensure you have the following:
