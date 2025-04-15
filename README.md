@@ -6,7 +6,7 @@ A simple desktop Weather App built using Python's `tkinter` for the graphical in
 
 This Weather App allows users to input the name of a city and retrieve the current weather conditions including:
 - **Country**
-- **Weather description (main)**
+- **Weather description**
 - **Temperature (in °C)**
 
 It serves as a beginner-friendly project showcasing how to interact with APIs and create GUIs using Python.
@@ -20,7 +20,7 @@ It serves as a beginner-friendly project showcasing how to interact with APIs an
 
 ## Screenshots
 
-*(Optional: Add a screenshot of your application here if you have one.)*
+![image](https://github.com/user-attachments/assets/71bd45b8-8fff-445b-9058-603548b8ffb8)
 
 ## Prerequisites
 
