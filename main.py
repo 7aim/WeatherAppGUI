@@ -2,7 +2,7 @@ import requests as re
 import tkinter as tk
 from tkinter import messagebox
 
-API_KEY = "9acd0597ae349fa651ff17893ec5b7e2"
+API_KEY = ""
 
 MAIN_COLOR = "#363763"
 BG_MAIN = "#2d2e52"
